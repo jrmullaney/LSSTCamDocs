@@ -16,7 +16,7 @@ the detector to produce a database containing the properties of
 billions of astronomical sources.
 
 
-Indices and tables
+Creating an obs_ package
 ==================
 
 * :ref:`genindex`
