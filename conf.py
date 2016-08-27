@@ -14,5 +14,10 @@ extensions = [
     'sphinx.ext.mathjax',
 ]
 
+# General information about the project.
+project = u'LSSTCam'
+copyright = u'2016, James Mullaney'
+author = u'James Mullaney'
+    
 html_title = u'LSSTCam v0.1'
 html_short_title = u'LSSTCam'
