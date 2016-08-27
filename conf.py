@@ -15,9 +15,12 @@ extensions = [
 ]
 
 # General information about the project.
-project = u'LSSTCam'
+project = u'Adapting LSST Stack'
 copyright = u'2016, James Mullaney'
 author = u'James Mullaney'
-    
-html_title = u'LSSTCam v0.1'
-html_short_title = u'LSSTCam'
+
+# The short X.Y version.
+version = u'0.1'
+# The full version, including alpha/beta/rc tags.
+release = u'0.1'
+
