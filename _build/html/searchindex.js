@@ -1,0 +1,1 @@
+Search.setIndex({envversion:49,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{content:0,index:0,modul:0,page:0,search:0},titles:["Adapting the LSST stack for other cameras"],titleterms:{adapt:0,camera:0,document:[],indice:0,lsst:0,lsstcam:[],other:0,stack:0,tabl:0,welcom:[]}})
