@@ -6,7 +6,9 @@
 Adapting the LSST stack for other cameras
 ===================================
 
-Contents:
+A major component the LSST project is the development of a software
+stack that will process the raw data from the raft of CCDs that form
+the detector to produce a database of astronomical sources.
 
 .. toctree::
    :maxdepth: 2
