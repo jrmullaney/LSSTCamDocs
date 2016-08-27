@@ -15,4 +15,4 @@ extensions = [
 ]
 
 html_title = u'LSSTCam v0.1'
-html_short_title = 'LSSTCam"
+html_short_title = u'LSSTCam'
