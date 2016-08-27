@@ -14,3 +14,4 @@ extensions = [
     'sphinx.ext.mathjax',
 ]
 
+html_title = u'LSSTCam v0.1'
