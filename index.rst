@@ -6,17 +6,38 @@
 Adapting the LSST stack for other cameras
 ===========================================
 
+The aim of this documentation is to explain how to adapt the LSST
+software stack to process data from other telescope+detector
+combinations -- hereafter referred to as a ``camera''. 
+
+This guide takes the form of a tutorial based on the author's
+trial-and-error experience of adapting the LSST stack to a wide field
+camera. As such, while it will lead you through the steps needed to
+set up your own camera, it comes with no guarantees that the resulting
+output will be reliable. Furthermore, any description of the stack's
+packages are based on the author's own limited understanding which is,
+in turn, based on (currently) very limited official documentation.
+
+Accompanying this tutorial is a github repository, obs_necam
+(pronounced "any cam"), which contains templates of the scripts and
+files needed to adapt the LSST stack to an alternate camera. The
+commits to this repository provide a set of snapshots which are
+referred to at key stages throught the tutorial.
+
+Finally, note that this documentation is in no way affiliated with the
+LSST.
+
 A major component the LSST project is the development of a software
 stack that will process the raw data from the raft of CCDs that form
 the LSST's detector. The end product of the stack will be a database
 containing the properties of billions of astronomical sources.
 
-
-Contents
+Table of contents
 -----------
 .. toctree::
    :maxdepth: 2
    
+   intro	
    stack_install
    obs_package
 
