@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Adapting the LSST stack for other cameras
-===========================================
+=========================================
 
 The aim of this documentation is to explain how to adapt the LSST
 software stack to process data from other telescope+detector
@@ -25,10 +25,10 @@ commits to this repository provide a set of snapshots which are
 referred to at key stages throught the tutorial.
 
 Finally, it is important to note that this documentation is in no way
-affiliated with the LSST.
+affiliated with nor endorsed by the LSST organisation.
 
 Table of contents
------------
+-----------------
 .. toctree::
    :maxdepth: 2
    
@@ -36,3 +36,4 @@ Table of contents
    stack_install
    obs_package
 
+.. update index
