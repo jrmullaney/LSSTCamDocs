@@ -10,7 +10,7 @@ The aim of this documentation is to explain how to adapt the LSST
 software stack to process data from other telescope+detector
 combinations -- hereafter referred to as a ``camera''. 
 
-This guide takes the form of a tutorial based on the author's
+The documentation takes the form of a tutorial based on the author's
 trial-and-error experience of adapting the LSST stack to a wide field
 camera. As such, while it will lead you through the steps needed to
 set up your own camera, it comes with no guarantees that the resulting
@@ -24,13 +24,8 @@ files needed to adapt the LSST stack to an alternate camera. The
 commits to this repository provide a set of snapshots which are
 referred to at key stages throught the tutorial.
 
-Finally, note that this documentation is in no way affiliated with the
-LSST.
-
-A major component the LSST project is the development of a software
-stack that will process the raw data from the raft of CCDs that form
-the LSST's detector. The end product of the stack will be a database
-containing the properties of billions of astronomical sources.
+Finally, it is important to note that this documentation is in no way
+affiliated with the LSST.
 
 Table of contents
 -----------
