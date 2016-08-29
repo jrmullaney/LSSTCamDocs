@@ -60,11 +60,11 @@ What this guide is
 This guide will explain how to develop a *basic* obs package that will
 allow the stack to process data from an alternate camera. It covers:
 
-** a brief description of how to install the stack,
+* a brief description of how to install the stack,
 
-** a section on how to ``ingest'' images into a format and filestructure that the stack can understand. 
+* a section on how to ``ingest'' images into a format and filestructure that the stack can understand. 
 
-** a description of how to process the raw images, including bias subtraction, flat fielding etc., to produce a final catalogue of detected sources.
+* a description of how to process the raw images, including bias subtraction, flat fielding etc., to produce a final catalogue of detected sources.
 
 The goal of the guide is simply to achieve these tasks without the
 stack crashing.
