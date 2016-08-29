@@ -31,7 +31,7 @@ The reason this is important for this guide is that before you can use
 a package that it already available in the installed stack (for
 example, obs\_subaru) you must set it up with EUPS by issuing (for
 this example) ::
-     ``setup obs\_subaru``
+     setup obs_subaru
 
 Of course, the obs\_package you will develop using this guide is *not*
 already available in the stack. Therefore, before you can use it you
