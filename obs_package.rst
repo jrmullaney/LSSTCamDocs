@@ -1,4 +1,4 @@
-A camera's obs package
+A camera's obs\_package
 ===============
 
 .. toctree::

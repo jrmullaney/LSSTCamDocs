@@ -11,7 +11,8 @@ important that the software needed to process the first observations
 is in a reasonable state of readiness prior to that time. As such,
 considerable work has already been carried-out in developing this
 software - known collectively as the LSST software stack. This stack
-is freely available on github on an open source licence.
+is freely available `here <https://github.com/lsst>`_ on github on an
+open source licence.
 
 Despite the stack being primarily developed for the LSST camera, since
 most astronomical imaging systems fundamentally similar (i.e.,
@@ -44,20 +45,23 @@ While developing the processing pipeline of a new wide field camera,
 some colleagues and I decided to explore the prospect of using the
 LSST software stack for this task. We soon discovered that to achieve
 this goal, we would need to develop a set of Python scripts and
-configuration files (hereafter, referred to as an 'obs\_package') that
-tells the stack how to read and process our data. We also discovered,
-however, that while obs packages do exists for other cameras, there
-was very little documentation describing how they were developed. 
+configuration files (hereafter, referred to as an ``obs\_package'')
+that tells the stack how to read and process our data. We also
+discovered, however, that while obs\_packages do exists for other
+cameras, there was very little documentation describing how they were
+developed.
 
-Cue many weeks of reverse-engineering the stack and the available obs
-packages of other cameras and a trial-and-error process of producing
-an our own obs package. We like to think of this guide as what we
-wished we had at the start of this process.
+Cue many weeks of reverse-engineering the stack and the available
+obs\_packages of other cameras (primarily, `obs\_sdss
+<https://github.com/lsst/obs_sdss>`_ and `obs\_subaru
+<https://github.com/lsst/obs_subaru>`_) and a trial-and-error process
+of producing an our own obs\_package. We like to think of this guide
+as what we wished we had at the start of this process.
 
 What this guide is
 ------------------
 
-This guide will explain how to develop a *basic* obs package that will
+This guide will explain how to develop a *basic* obs\_package that will
 allow the stack to process data from an alternate camera. It covers:
 
 * a brief description of how to install the stack,
@@ -70,7 +74,7 @@ The goal of the guide is simply to achieve these tasks without the
 stack crashing.
 
 As I played no role in developing the LSST stack, there are some parts
-of the obs package that I don't fully understand. I just know that I
+of the obs\_package that I don't fully understand. I just know that I
 had to include them in order to achieve the end goal.
 
 What this guide isn't
