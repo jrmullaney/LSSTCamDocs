@@ -44,7 +44,7 @@ While developing the processing pipeline of a new wide field camera,
 some colleagues and I decided to explore the prospect of using the
 LSST software stack for this task. We soon discovered that to achieve
 this goal, we would need to develop a set of Python scripts and
-configuration files (hereafter, referred to as an 'obs package') that
+configuration files (hereafter, referred to as an 'obs\_package') that
 tells the stack how to read and process our data. We also discovered,
 however, that while obs packages do exists for other cameras, there
 was very little documentation describing how they were developed. 
