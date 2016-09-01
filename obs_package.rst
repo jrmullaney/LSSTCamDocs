@@ -5,8 +5,8 @@ Adapting the LSST stack to a new camera involves setting up a new
 package within the LSST stack. This package is usually called an
 ``obs_<package>``. I like to think of it as an interface between the
 rest of the LSST stack and the data from the camarea. Contained within
-an ``obs_<package>`` is a set of configuration files that tells the rest
-of the stack things like:
+an ``obs_<package>`` is a set of Python scripts and configuration
+files that tells the rest of the stack things like:
 
 * the properties of your detector (e.g., dimensions, overscan region) and its filters,
 * the file structure where your data is held,
@@ -16,7 +16,8 @@ of the stack things like:
 Provided you only want to use the stack in its current form (i.e., you
 don't want to edit the stack proper to add extra functionalities) then
 making your own ``obs_<package>`` is the *only* thing you will need to
-do to adapt the stack to your camera.
+do to adapt the stack to your camera. Having said that, developing
+your own ``obs_<package'' is no trivial task.
 
 If you have already installed the LSST stack, you will note that it
 already contains a number of ``obs_<packages>``; for example,
