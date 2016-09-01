@@ -41,7 +41,7 @@ installed stack is different to that on github).
 You will notice that the various ``obs_<packages>`` already installed
 are just directories. So, to create your own ``obs_<package>``, the
 first think you will need to do is ``mkdir`` a new directory named
-accordingly; I use ``obs_necam'' throughout. In the following, I
+accordingly; I use ``obs_necam`` throughout. In the following, I
 assume that the ``$stack`` variable points to the directory containing
 installed LSST stack packages (e.g., in bash shell: ``export
 stack=~/Workstuff/lsstsw/stack/Linux64/``): ::
