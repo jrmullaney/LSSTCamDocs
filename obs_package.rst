@@ -79,7 +79,7 @@ you will need to add some ``__init__.py`` files to the
 	echo import pkgutil, lsstimport > __init__.py
 	echo __path__ = pkgutil.extend_path(__path__, __name__) >> __init__.py	
 
-Note the ``>>`` in the second line, which appends to the file. Next,
+Note the ``>>`` in the last line, which appends to the file. Next,
 do the same in ``$stack/python/lsst/obs`` . If you make a mistake,
 simply open up the file in your favourite editor (vim, emacs, etc.)
 and correct it.
