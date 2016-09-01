@@ -1,11 +1,11 @@
-A camera's obs\_package
-===============
+A camera's ``obs\_package`
+==========================
 
 Adapting the LSST stack to a new camera involves setting up a new
 package within the LSST stack. This package is usually called an
-`obs_<package>`. I like to think of it as an interface between the
+``obs_<package>``. I like to think of it as an interface between the
 rest of the LSST stack and the data from the camarea. Contained within
-an `obs_<package>` is a set of configuration files that tells the rest
+an ``obs_<package>`` is a set of configuration files that tells the rest
 of the stack things like:
 
 * the properties of your detector (e.g., dimensions, overscan region) and its filters,
@@ -15,13 +15,13 @@ of the stack things like:
 
 Provided you only want to use the stack in its current form (i.e., you
 don't want to edit the stack proper to add extra functionalities) then
-making your own `obs_<package>` is the *only* thing you will need to
+making your own ``obs_<package>`` is the *only* thing you will need to
 do to adapt the stack to your camera.
 
 If you have already installed the LSST stack, you will note that it
-already contains a number of `obs_<packages>`; for example,
-`obs_sdss`, `obs_cfht` and, the most useful and most developed,
-`obs_subaru`.` You can have a look around and familiarise yourself
+already contains a number of ``obs_<packages>``; for example,
+``obs_sdss``, ``obs_cfht`` and, the most useful and most developed,
+``obs_subaru``. You can have a look around and familiarise yourself
 with the contents of these packages, either within your own install or
 in the LSST github repository (which is my preference, though bear in
 mind that the github repository is constantly being updates, so it
