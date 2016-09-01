@@ -69,7 +69,7 @@ just provide a brief description:
 * **config:** Configuration files that tell the various stack process that access your data how to behave. 
 * **policy:** Files describing the file structure and type of input and output data (e.g., image, table etc).
 * **ups:** A file telling the eups system what other packages need to be set up to use this ``obs_<package>``.
-* **python/lsst/obs/necam:** Various Python scripts that perform processes such as instrument signature removal.
+* **python/lsst/obs/necam:** Various Python scripts that perform tasks such as instrument signature removal.
 
 Before populating these directories with the files described above,
 you will need to add some ``__init__.py`` files to the
