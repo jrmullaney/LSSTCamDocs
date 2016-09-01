@@ -49,7 +49,7 @@ stack=~/Workstuff/lsstsw/stack/Linux64/``): ::
 	cd $stack
 	mkdir obs_necam 
 
-Next, within obs_necam, you will need to ``mkdir`` five other
+Next, within ``obs_necam``, you will need to ``mkdir`` five other
 directories called: ::
 	    
 	    mkdir camera
@@ -61,7 +61,27 @@ directories called: ::
 Here, the ``-p`` option causes all the parent directories to be
 created as well.
 
+The next few pages will describe in detail the files that these
+directories need to contain to process your camera's data. Here, I
+just provide a brief description:
 
+* **camera:** Files containing information that describe the properties of your camera, such as its dimensions, gain etc.
+* **config:** Configuration files that tell the various stack process that access your data how to behave. 
+* **policy:** Files describing the file structure and type of input and output data (e.g., image, table etc).
+* **ups:** A file telling the eups system what other packages need to be set up to use this ``obs_<package>``.
+* **python/lsst/obs/necam:** Various Python scripts that perform processes such as instrument signature removal.
 
+Before populating these directories with the files described above,
+you will need to add some ``__init__.py`` files to the
+``python/lsst`` and ``python/lsst/obs`` directories: ::
+
+	cd $stack/python/lsst/
+	echo import pkgutil, lsstimport > __init__.py
+	echo __path__ = pkgutil.extend_path(__path__, __name__) >> __init__.py	
+
+Note the ``>>`` in the second line, which appends to the file. Next,
+do the same in ``$stack/python/lsst/obs`` . If you make a mistake,
+simply open up the file in your favourite editor (vim, emacs, etc.)
+and correct it.
 
 
