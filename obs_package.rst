@@ -1,4 +1,4 @@
-A camera's ``obs\_package`
+A camera's ''obs'' package
 ==========================
 
 Adapting the LSST stack to a new camera involves setting up a new
