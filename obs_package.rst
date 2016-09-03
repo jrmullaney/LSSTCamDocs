@@ -34,7 +34,7 @@ already contains a number of obs\_packages; for example,
 a reference, ``obs_subaru``. You can have a look around and
 familiarise yourself with the contents of these packages, either
 within your own install or in the `LSST github repository
-<https://github.com/lsst>`_ repository (which is my preference, though
+<https://github.com/lsst>`_ (which is my preference, though
 bear in mind that the github repository is constantly being updated,
 so it won't be long until your installed stack is different to that on
 github).
