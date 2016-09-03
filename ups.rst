@@ -77,3 +77,18 @@ telling it which is the ``current`` version using:
 Unlike ``declare``, you must ``setup`` your obs\_package every time
 you start a new session. Of course, you can automate this by adding
 the ``setup`` command to your ``.bashrc`` file.
+
+While your obs\_package doesn't contain any scripts yet, since you
+included the ``pipe_tasks`` package in your ups table, you can check
+whether it has been set up corrected by testing whether you can call
+the pipe\_tasks commands. To do this, try to issue: ::
+
+    processCcd.py
+
+At this stage, this command will certainly fail, but if you get the
+following: ::
+   
+   bash: processCcd.py: command not found
+
+then it means that your obs_package has not bee set up correctly.
+
