@@ -70,7 +70,7 @@ This makes keeping separate versions and switching between them quick
 and easy.
 
 If you wish, you can tell EUPS which version to use by default by
-telling it which is the ``current`` version using:
+telling it which is the ``current`` version using: ::
 
    eups declare -t current obs_necam v1
 
