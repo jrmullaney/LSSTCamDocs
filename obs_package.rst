@@ -29,7 +29,7 @@ do to adapt the stack to your camera. Having said that, developing
 your own obs\_package is no trivial task.
 
 If you have already installed the LSST stack, you will note that it
-already contains a number of ``obs\_packages``; for example,
+already contains a number of obs\_packages; for example,
 ``obs_sdss``, ``obs_cfht`` and, the most developed and most useful as
 a reference, ``obs_subaru``. You can have a look around and
 familiarise yourself with the contents of these packages, either
