@@ -5,9 +5,9 @@ A camera's ''obs'' package
    :hidden:
 
    ups			
-   python
-   config	
+   mapper
    policy   
+   config	
    camera
 
 Adapting the LSST stack to a new camera involves setting up a new
