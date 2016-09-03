@@ -48,9 +48,13 @@ installed LSST stack packages (e.g., in bash shell: ``export
 stack=~/Workstuff/lsstsw/stack/Linux64/``): ::
 
 	cd $stack
-	mkdir obs_necam 
+	mkdir -p obs_necam/v1 
 
-Next, within ``obs_necam``, you will need to ``mkdir`` five other
+Here, the ``-p`` option causes the parent directory (i.e.,
+``obs_necam``) to be created as well. Here, I have created the ``v1``
+to contain the first version of the obs\_package.
+
+Next, within ``obs_necam/v1``, you will need to ``mkdir`` five other
 directories called: ::
 	    
 	    mkdir camera
@@ -58,9 +62,6 @@ directories called: ::
 	    mkdir policy
 	    mkdir ups
 	    mkdir -p python/lsst/obs/necam
-
-Here, the ``-p`` option causes all the parent directories to be
-created as well.
 
 The next few pages will describe in detail the files that these
 directories need to contain to process your camera's data. Here, I
@@ -76,9 +77,9 @@ Before populating these directories with the files described above,
 you will need to add some ``__init__.py`` files to the
 ``python/lsst`` and ``python/lsst/obs`` directories: ::
 
-	cd $stack/python/lsst/
+	cd $stack/obs_necam/v1/python/lsst/
 	echo 'import pkgutil, lsstimport' > __init__.py
-	echo '__path__ = pkgutil.extend_path(__path__, __name__)' >> __init__.py	
+	echo '__path__ = pkgutil.extend_path(__path__, __name__)' >> __init__.py
 
 Note the ``>>`` in the last line, which appends to the file. Next, do
 the same in ``$stack/python/lsst/obs`` . If you make a mistake in the
