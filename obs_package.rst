@@ -2,6 +2,7 @@ A camera's ''obs'' package
 ==========================
 
 .. toctree::
+   :maxdepth: 2
    :hidden:
 
    ups			
