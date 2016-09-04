@@ -1,13 +1,13 @@
 A camera's ''obs'' package
 ==========================
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-
-   ups			
-
-.. update index
+#.. toctree::
+#   :maxdepth: 2
+#   :hidden:
+#
+#   ups			
+#
+#.. update index
 
 Adapting the LSST stack to a new camera involves setting up a new
 package within the LSST stack. This package is usually called an
