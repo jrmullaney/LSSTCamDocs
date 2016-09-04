@@ -1,2 +1,2 @@
-``Mapping'' a camera
-====================
+Mapping a camera
+================
