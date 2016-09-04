@@ -38,5 +38,6 @@ Table of contents
    stack_install
    obs_package/index
    ingest/index   
+   processCcd/index   
       
 .. update index
