@@ -6,10 +6,6 @@ A camera's ''obs'' package
    :hidden:
 
    ups			
-   mapper
-   policy   
-   config	
-   camera
 
 Adapting the LSST stack to a new camera involves setting up a new
 package within the LSST stack. This package is usually called an
