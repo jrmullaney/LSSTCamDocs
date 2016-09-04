@@ -32,7 +32,8 @@ Table of contents
 .. toctree::
    :maxdepth: 10
    :includehidden:
-      
+   :titlesonly:   
+   
    intro	
    stack_install
    obs_package/index
