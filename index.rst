@@ -30,10 +30,10 @@ affiliated with nor endorsed by the LSST organisation.
 Table of contents
 -----------------
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 10
    
    intro	
    stack_install
    obs_package
-
+      
 .. update index
