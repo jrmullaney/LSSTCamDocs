@@ -7,6 +7,8 @@ A camera's ''obs'' package
 
    ups			
 
+.. update index
+
 Adapting the LSST stack to a new camera involves setting up a new
 package within the LSST stack. This package is usually called an
 obs\_package. I like to think of it as an interface between the
