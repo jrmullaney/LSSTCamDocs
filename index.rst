@@ -37,5 +37,6 @@ Table of contents
    intro	
    stack_install
    obs_package/index
+   ingest/index   
       
 .. update index
