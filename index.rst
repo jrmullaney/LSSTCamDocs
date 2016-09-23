@@ -13,10 +13,11 @@ combinations -- hereafter referred to as a ``camera''.
 The documentation takes the form of a tutorial based on the author's
 trial-and-error experience of adapting the LSST stack to a wide field
 camera. As such, while it will lead you through the steps needed to
-set up your own camera, it comes with no guarantees that the resulting
-output will be reliable. Furthermore, any description of the stack's
-packages are based on the author's own limited understanding which is,
-in turn, based on (currently) very limited official documentation.
+set up your own camera, you will have to adjust a wide range of
+parameters to suit your camera before it will produce reliable
+results. Also note that any description of the stack's packages are
+based on the author's own limited understanding which is, in turn,
+based on (currently) very limited official documentation.
 
 Accompanying this tutorial is a github repository, obs_necam
 (pronounced "any cam"), which contains templates of the scripts and
