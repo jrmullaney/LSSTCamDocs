@@ -48,6 +48,9 @@ up. This means that, while EUPS is ``aware'' of it, the LSST stack
 cannot yet access its contents. To explain why this is the case, we
 need to consider package ``versions''.
 
+Setting up package versions
+---------------------------
+
 Imagine a situation where your obs\_package is working, but you want
 to add a new feature. You don't want to edit the working version in
 case you break it, so you make a new directory: ``obs_<package>/v2/``
