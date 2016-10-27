@@ -10,6 +10,6 @@ and perform source detection. Both these tasks are performed by
 Like all of the data processing tasks in the LSST stack,
 ``processCcd.py`` resides in the ``pipe_tasks`` repository. This means
 that, provided you have setup the eups table in``obs_necam`` following
-the instructions in `Link The EUPS table
+the instructions in `The EUPS table
 <http://lsstcamdocs.readthedocs.io/en/latest/obs_package/ups.html>`_
 section
