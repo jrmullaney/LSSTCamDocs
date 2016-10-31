@@ -41,4 +41,20 @@ filestructure of our input data and the physical properties of the
 detector.
 
 The part of the mapper script described here can be found in the
-obs\_necam GitHub repository (**need to provide link**).
+obs\_necam GitHub repository (**need to provide link**) and is called
+``necamMapper.py`` (note, this is the penultimate string in the
+``_mapper`` file). At the beginning of the script a number of LSST
+modules are imported. It makes more sense if these modules are
+described as we encounter them in the script. After the imports, a
+python class is defined called ``NecamMapper`` that inherits the
+``CameraMapper`` class (note that NecamMapper is the last string in
+the ``_mapper`` file).
+
+Within ``NecamMapper`` we declare which obs\_package we want the task
+to use to access our data; oddly enough (and despite the ``_mapper``
+file) this is the first time the task has been explicitly told which
+package to use to access our data. ::
+	packageName = 'obs_swasp'
+
+ As you'd expect, this *must* match
+an obs\_package that has been setup in the eups system.
