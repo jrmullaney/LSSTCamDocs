@@ -9,8 +9,8 @@ where information on the physical properties of the detector is
 stored, how to read the data, etc. As such, the mapper file is one of
 the most important components of a camera's obs\_package.
 
-Informing a task the location of the mapper file
-------------------------------------------------
+Telling an LSST task the location of the mapper file
+----------------------------------------------------
 
 The location of the mapper file is provided to an LSST task via a file
 named (reasonably enough) ``_mapper``, which is contained within the
@@ -28,3 +28,5 @@ To enable the LSST stack to work with our ``obs_necam`` package,
 
 (note to follow the single line with a carriage return).
 
+The very basics of a mapper file
+--------------------------------
