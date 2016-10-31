@@ -6,6 +6,7 @@ A camera's ''obs'' package
    :hidden:   
 
    ups			
+   config
 
 .. update index
 
