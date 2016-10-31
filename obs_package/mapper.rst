@@ -7,7 +7,7 @@ is look for the "mapper" file. This file tells the task what
 obs\_package to use, where to find the file structure of the data,
 where information on the physical properties of the detector is
 stored, how to read the data, etc. As such, the mapper file is one of
-the most important components of a camera's obs_package.
+the most important components of a camera's obs\_package.
 
 When an LSST task is executed, it looks for a file called ``_mapper``
 contained within the topmost level of the input data
@@ -17,11 +17,10 @@ your telescopes raw data is held in: ::
      /path/to/my/data/raw/Night1/
 
 then you may wish to put ``_mapper`` in the ``data/`` directory (the
-one that contains the ``raw`` data).
+one that contains the ``raw`` data). To enable the LSST stack to work
+with our ``obs_necam`` package, ``_mapper`` would need to contain a
+single line entry: ::
+       lsst.obs.necam.necamMapper.NecamMapper
 
-To enable the LSST stack to work with our ``obs_necam`` package,
-   ``_mapper`` would need to contain a single line entry: ::
-   lsst.obs.necam.necamMapper.NecamMapper
-   
 (note to follow the single line with a carriage return).
 
