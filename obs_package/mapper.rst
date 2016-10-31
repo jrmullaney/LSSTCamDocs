@@ -19,7 +19,8 @@ your telescopes raw data is held in: ::
 then you may wish to put ``_mapper`` in the ``data/`` directory (the
 one that contains the ``raw`` data).
 
-To enable the LSST stack to work with our ``obs_necam`` package, ``_mapper`` would need to contain a single line entry: ::
+To enable the LSST stack to work with our ``obs_necam`` package,
+   ``_mapper`` would need to contain a single line entry: ::
    lsst.obs.necam.necamMapper.NecamMapper
    
 (note to follow the single line with a carriage return).
