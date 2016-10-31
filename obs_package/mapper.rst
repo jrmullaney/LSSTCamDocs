@@ -28,7 +28,7 @@ To enable the LSST stack to work with our ``obs_necam`` package,
 
 (note to follow the single line with a carriage return).
 
-The basics of a mapper file - Part 1
+The mapper script - Part 1
 ------------------------------------
 
 Because it plays a very central role in the way an LSST task accesses
