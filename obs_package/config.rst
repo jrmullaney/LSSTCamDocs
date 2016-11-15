@@ -23,10 +23,17 @@ all the parameters that can set for a given task. To overcome this
 problem, I wrote a small python script -- ``printDict`` -- which can
 be called from within a config file that will list all of the
 parameters that can be set, together with their current values: ::
-	from lsst.obs.swasp.printDict import printDict
+	from lsst.obs.necam.printDict import printDict
 	obj = printDict(config, path=['config'])
 
 Once you have used ``printDict`` to see what parameters can be set,
-then changing their values is as straightforward as: ::
+changing their values is as straightforward as: ::
      	config.charImage.repair.cosmicray.nCrPixelMax = 1000000
+
+There are potentially hundreds of parameters that can be set for each
+task, and with the current lack of official documentation I am unable
+to provide any description of them here. Thankfully, a lot of the
+parameter names are quite self-explanatory, so I suggest take a look
+through them with ``printDict`` and experiment with changing some
+parameters.
 
