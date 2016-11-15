@@ -16,3 +16,17 @@ instruct the task to measure the PSF and perform source deblending,
 while also providing the flux cut used to select sources to define the
 PSF. In this specific case, the config file plays a similar role as
 the .sex configuration file used by SourceExtractor.
+
+Each LSST task has its own set of configuration parameters that can be
+set in the config file. Currently, there is no documentation listing
+all the parameters that can set for a given task. To overcome this
+problem, I wrote a small python script -- ``printDict`` -- which can
+be called from within a config file that will list all of the
+parameters that can be set, together with their current values: ::
+	from lsst.obs.swasp.printDict import printDict
+	obj = printDict(config, path=['config'])
+
+Once you have used ``printDict`` to see what parameters can be set,
+then changing their values is as straightforward as: ::
+     	config.charImage.repair.cosmicray.nCrPixelMax = 1000000
+
