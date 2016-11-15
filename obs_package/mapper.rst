@@ -35,21 +35,20 @@ Because it plays a very central role in the way an LSST task accesses
 data, an obs\_package's mapper script can become rather extensive. As
 such, in this tutorial we will build up the mapper script in separate
 stages, returning to it as the obs\_package develops. In this first
-part, we will use the mapper script to tell the called task where it can
-find a configuration file as well as the information describing the
-filestructure of our input data and the physical properties of the
-detector.
+part, we will use the mapper script to tell the executed LSST task
+where it can find a configuration file containing a set of
+instructions and parameters that tell the task what to do.
 
 The part of the mapper script described here can be found in the
 obs\_necam GitHub repository (**need to provide link**) and is called
 ``necamMapper.py`` (the filename is equal to the last-but-one of the
 period-separated strings in the ``_mapper`` file). At the beginning of
-the script a number of LSST modules are imported. I'll not describe
+the script a number of LSST modules are imported. I won't describe
 these modules here; it makes more sense if they are described as we
-encounter them in the script. After the imports, a python class is
+encounter them in the script. After these imports, a python class is
 defined called ``NecamMapper`` that inherits the ``CameraMapper``
 class (note that NecamMapper is the last of the period-separated
-strings in the ``_mapper`` file): :: 
+strings in the ``_mapper`` file): ::
 	class NecamMapper(CameraMapper):
 
 Within ``NecamMapper`` we declare which obs\_package we want the task
@@ -63,4 +62,4 @@ in the eups system, and in almost all cases will be the current
 obs\_package.
 
 Now the LSST task you have executed knows the ``packageName``, it can
-look for a corresponding config file, which we describe next.
+look for a corresponding configuration file, which we describe next.
