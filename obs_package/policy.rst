@@ -56,6 +56,6 @@ with the ID: ::
      dateObs=2016-01-01 filter=V frameId=1
 
 Note the variable format descriptor after the closing bracket (e.g.,
-%(<value>)*s*), which tells the stack the format of each ID in the
-filepath. Here, ``s`` refers to string, whereas ``04d`` means a number
-four characters long, padded with 0's if necessary.
+the ``s`` in ``%(<value>)s``), which tells the stack the format of
+each ID in the filepath. Here, ``s`` refers to string, whereas ``04d``
+means a number four characters long, padded with 0's if necessary.
