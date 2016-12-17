@@ -3,7 +3,7 @@ Task config files
 
 When you execute an LSST task, it first goes to the obs mapper script
 (introduced on the previous page), then looks for an associated
-configuration (hereafter, config) file within the obs_\package. All
+configuration (hereafter, config) file within the obs\_package. All
 config files are contained within the ``config`` directory (e.g.,
 ``obs_necam/v1/config/``) and are named after their associated task;
 for example, the config file for the ``processCcd`` task has the
@@ -33,7 +33,7 @@ changing their values is as straightforward as: ::
 There are potentially hundreds of parameters that can be set for each
 task, and with the current lack of official documentation I am unable
 to provide any description of them here. Thankfully, a lot of the
-parameter names are quite self-explanatory, so I suggest take a look
+parameter names are quite self-explanatory, so I suggest you take a look
 through them with ``printDict`` and experiment with changing some
 parameters.
 
