@@ -11,14 +11,13 @@ packages in the stack your obs\_package depends on, and thus also need
 setting up. It also modifies your paths to include the directories in
 which your scripts are contained.
 
-To create your table file, open it in an editor and add the following
-lines: ::
+To create your table file, within the ``ups`` directory open a file named ``obs_necam.table`` in an editor and add the following lines: ::
    
    setupRequired(pipe_tasks)
    envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 
 This tells the EUPS system that when your obs\_package is set up, it
-also needs to set up the ``pipe_tasks`` package.
+also needs to set up the ``pipe_tasks`` package. The ``pipe_tasks`` package contains most (but not all - we'll add more later) of the scripts you'll call to process your data. Thankfully, you don't then need to figure out all the packages that ``pipe_tasks`` depend on; its ups table file for the ``pipe_tasks`` includes all the packages that *it* depends-upon to work, and so on and so forth. As such, you only need to list the very top-level packages you'll be using within your table file (similar to how apt-get or HomeBrew takes care of dependencies when installing new packages).
 
 Declaring your obs\_package
 ---------------------------
@@ -83,7 +82,7 @@ the ``setup`` command to your ``.bashrc`` file.
 
 While your obs\_package doesn't contain any scripts yet, since you
 included the ``pipe_tasks`` package in your ups table, you can check
-whether it has been set up corrected by testing whether you can call
+whether it has been set up correctly by testing whether you can call
 the pipe\_tasks commands. To do this, try to issue: ::
 
     processCcd.py
@@ -93,5 +92,5 @@ following: ::
    
    bash: processCcd.py: command not found
 
-then it means that your obs_package has not bee set up correctly.
+then it means that your obs_package has not been set up correctly. If this is the case, try declaring your obs_package again. If that still doesn't work, I suggest you start over with a clean obs_package.
 
