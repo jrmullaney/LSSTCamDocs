@@ -52,14 +52,14 @@ strings in the ``_mapper`` file): ::
 	class NecamMapper(CameraMapper):
 
 Within ``NecamMapper`` we declare which obs\_package we want the task
-to use to access our data; oddly enough (and despite the ``_mapper``
-file) this is the first time the task has been explicitly told which
+to use to access our data; despite the ``_mapper``
+file, this is the first time the task has been explicitly told which
 package to use to access our data ::
-	packageName = 'obs_swasp'
+	packageName = 'obs_necam'
 
 As you'd expect, this *must* match an obs\_package that has been setup
 in the eups system, and in almost all cases will be the current
 obs\_package.
 
 Now the LSST task you have executed knows the ``packageName``, it can
-look for a corresponding configuration file, which we describe next.
+look for a corresponding configuration file, which is described next.
