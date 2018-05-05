@@ -47,7 +47,7 @@ the script a number of LSST modules are imported. I won't describe
 these modules here; it makes more sense if they are described as we
 encounter them in the script. After these imports, a python class is
 defined called ``NecamMapper`` that inherits the ``CameraMapper``
-class (note that ``NecamMapper'' is the last of the period-separated
+class (note that ``NecamMapper`` is the last of the period-separated
 strings in the ``_mapper`` file): ::
 	class NecamMapper(CameraMapper):
 
