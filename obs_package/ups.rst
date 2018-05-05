@@ -85,10 +85,10 @@ included the ``pipe_tasks`` package in your ups table, you can check
 whether it has been set up correctly by testing whether you can call
 the pipe\_tasks commands. To do this, try to issue: ::
 
+    setup obs_necam v1
     processCcd.py
 
-At this stage, this command will certainly fail, but if you get the
-following: ::
+at the command line. ``processCcd.py`` is a ``pipe_task`` that (among other thnigs) calibrates and detects sources on your raw images. At this stage, ``pipe_tasks`` does not have sufficient information to run properly and should instead give you some information about various configurable parameters. However, if you get the following: ::
    
    bash: processCcd.py: command not found
 
