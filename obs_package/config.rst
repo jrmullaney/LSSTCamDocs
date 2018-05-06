@@ -25,7 +25,7 @@ then rather than executing the task, it will instead spit-out a list of all the 
 
 Once you have used
 
-``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
+to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
     config.charImage.repair.cosmicray.nCrPixelMax = 1000000
 
 in the task's respective config file.
