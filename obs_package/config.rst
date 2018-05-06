@@ -23,9 +23,12 @@ set in the config file. If you execute a particular task at the command prompt a
 
 then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you have already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
 
-Once you have used ``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line ::
-   config.charImage.repair.cosmicray.nCrPixelMax = 1000000
-in the task's respective config file.
+Once you have used ``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line 
 
-Since each task requires a different config file, we'll edit the config files as required when we start working with different tasks. Before that, however, your obs_package needs to tell the LSST stack how to organise your input and output data. It does this via the ``policy'' file, which I'll describe next.
+::
+   config.charImage.repair.cosmicray.nCrPixelMax = 1000000
+
+in the task\'s respective config file.
+
+Since each task requires a different config file, we\'ll edit the config files as required when we start working with different tasks. Before that, however, your obs_package needs to tell the LSST stack how to organise your input and output data. It does this via the ``policy'' file, which I\'ll describe next.
 
