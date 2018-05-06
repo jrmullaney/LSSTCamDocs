@@ -17,16 +17,14 @@ while also providing the flux cut used to select sources to define the
 PSF. In this specific case, the config file plays a similar role as
 the .sex configuration file used by SourceExtractor.
 
-.. Each LSST task has its own set of configuration parameters that can be
-set in the config file. If you execute a particular task at the command prompt and follow it with the option ``show config``, e.g.: ::
-    processCcd.py . show config
+.. Each LSST task has its own set of configuration parameters that can be set in the config file. If you execute a particular task at the command prompt and follow it with the option ``show config``, e.g.: processCcd.py . show config
 
 .. then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you have already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
 
 Once you have used ``show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
 	processCcd.py
 
-config.charImage.repair.cosmicray.nCrPixelMax = 1000000
+.. config.charImage.repair.cosmicray.nCrPixelMax = 1000000
 
 in the task\'s respective config file.
 
