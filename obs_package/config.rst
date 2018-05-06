@@ -19,15 +19,12 @@ the .sex configuration file used by SourceExtractor.
 
 Each LSST task has its own set of configuration parameters that can be
 set in the config file. If you execute a particular task at the command prompt and follow it with the option ``--show config``, e.g.: ::
-	processCcd.py . --show config
+    processCcd.py . --show config
 
-then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you've already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
+then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you have already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
 
-Once you have used ``--show config`` to see what parameters
-
-to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, ::
-	config.charImage.repair.cosmicray.nCrPixelMax = 1000000
-
+Once you have used ``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line ::
+   config.charImage.repair.cosmicray.nCrPixelMax = 1000000
 in the task's respective config file.
 
 Since each task requires a different config file, we'll edit the config files as required when we start working with different tasks. Before that, however, your obs_package needs to tell the LSST stack how to organise your input and output data. It does this via the ``policy'' file, which I'll describe next.
