@@ -3,7 +3,7 @@ Task config files
 
 When you execute an task, such as processCcd, it first goes to the obs mapper script (introduced on the previous page), then looks for an associated
 configuration (hereafter, config) file within the obs\_package. All
-config files are contained within the ``config`` directory of the obs_ package(e.g.,
+config files are contained within the ``config`` directory of the obs_package(e.g.,
 ``obs_necam/v1/config/``) and are named after their associated task;
 for example, the config file for the processCcd task has the
 filename ``processCcd.py``.
