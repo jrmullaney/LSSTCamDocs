@@ -23,9 +23,8 @@ the .sex configuration file used by SourceExtractor.
 
 Hello
 
-Once you have used ``show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line:
-	processCcd.py
-
+Once you have used ``show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line
+	
 .. config.charImage.repair.cosmicray.nCrPixelMax = 1000000
 
 in the task\'s respective config file.
