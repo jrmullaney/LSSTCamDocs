@@ -25,6 +25,7 @@ then rather than executing the task, it will instead spit-out a list of all the 
 
 Once you have used ``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
      	config.charImage.repair.cosmicray.nCrPixelMax = 1000000
+
 in the task's respective config file.
 
 Since each task requires a different config file, we'll edit the config files as required when we start working with different tasks. Before that, however, your obs_package needs to tell the LSST stack how to organise your input and output data. It does this via the ``policy'' file, which I'll describe next.
