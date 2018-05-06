@@ -19,7 +19,7 @@ the .sex configuration file used by SourceExtractor.
 
 Each LSST task has its own set of configuration parameters that can be
 set in the config file. If you execute a particular task at the command prompt and follow it with the option ``--show config``, e.g.: ::
-    processCcd.py . --show config
+    processCcd.py . show config
 
 then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you have already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
 
