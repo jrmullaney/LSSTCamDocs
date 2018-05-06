@@ -23,7 +23,9 @@ set in the config file. If you execute a particular task at the command prompt a
 
 then rather than executing the task, it will instead spit-out a list of all the configurable parameters for that task, together with short (mostly single-line) descriptions of what each parameter does. If you've already set up ``obs_necam`` you can run the above command and get a list of the thousands of parameters you can set for ``processCcd.py``.
 
-Once you have used ``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
+Once you have used
+
+``--show config`` to see what parameters can be set for a given task, then changing their values is as straightforward as putting, for example, the following line: ::
     config.charImage.repair.cosmicray.nCrPixelMax = 1000000
 
 in the task's respective config file.
