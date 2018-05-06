@@ -1,7 +1,7 @@
 The obs mapper
 ==============
 
-When you execute an LSST task, such as ``processCcd.py`` to perform
+When you execute a task, such as ``processCcd.py`` to perform
 basic data reduction and source detection, the first thing it will do
 is look for the "mapper" script. This python script tells the task
 what obs\_package to use, where to find the file structure of the
@@ -12,7 +12,7 @@ of the most important components of a camera's obs\_package.
 Telling an LSST task the location of the mapper file
 ----------------------------------------------------
 
-The location of the mapper script is provided to an LSST task via a file
+The location of the mapper script is provided to a task via a file
 named (reasonably enough) ``_mapper``, which is contained within the
 topmost level of your input data directory. For example, if your
 telescopes raw data is held in: ::
@@ -40,9 +40,7 @@ where it can find a configuration file containing a set of
 instructions and parameters that tell the task what to do.
 
 The part of the mapper script described here can be found in the
-obs\_necam GitHub repository (**need to provide link**) and is called
-``necamMapper.py`` (the filename is equal to the last-but-one of the
-period-separated strings in the ``_mapper`` file). At the beginning of
+obs\_necam GitHub repository (https://github.com/jrmullaney/obs_necam) and is called ``necamMapper.py`` (the filename must be the same as the last-but-one of the period-separated strings in the ``_mapper`` file, described above, but with the addition of ``.py'' at the end). At the beginning of
 the script a number of LSST modules are imported. I won't describe
 these modules here; it makes more sense if they are described as we
 encounter them in the script. After these imports, a python class is
@@ -61,5 +59,6 @@ As you'd expect, this *must* match an obs\_package that has been setup
 in the eups system, and in almost all cases will be the current
 obs\_package.
 
-Now the LSST task you have executed knows the ``packageName``, it can
+Now the task you have executed knows the ``packageName``, it can
 look for a corresponding configuration file, which is described next.
+```
