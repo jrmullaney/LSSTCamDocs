@@ -21,9 +21,7 @@ based on (currently) very limited official documentation.
 
 Accompanying this tutorial is a github repository, obs_necam_
 (pronounced "any cam"), which contains templates of the scripts and
-files needed to adapt the LSST stack to an alternate camera. The
-commits to this repository provide a set of snapshots which are
-referred to at key stages throught the tutorial.
+files needed to adapt the LSST stack to an alternate camera. I recommend you refer to the contents of that repository while following this guide; indeed, feel free to fork and edit obs_necam_ as you progress.
 
 .. _obs_necam: https://github.com/jrmullaney/obs_necam
 
