@@ -8,6 +8,8 @@ There is a policy file in the policy directory of obs_necam_ ; it is called ``Ne
        needCalibRegistry: true
        camera: "../camera"
 
+.. obs_necam: https://github.com/jrmullaney/obs_necam
+
 Next come a number of text blocks that describe the locations and contents of the stack's various input and output files. Surrounding groups of these blocks are classifiers called things like ``exposures``, ``calibrations``, ``datasets``, etc. Considering the first block within the ``exposures`` classifier: ::
 
         	raw:
@@ -25,5 +27,4 @@ Note the variable format descriptor after the closing bracket (e.g., the ``s`` i
 
 We'll keep adding to the policy file as we develop the obs\_package as we progress through the guide. 
 
-.. obs_necam: https://github.com/jrmullaney/obs_necam
 .. `Ingest section`: _ingest
