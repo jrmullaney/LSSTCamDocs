@@ -8,7 +8,7 @@ Adapting the LSST stack for other cameras
 
 The aim of this documentation is to explain how to adapt the LSST
 software stack to process data from other telescope+detector
-combinations -- hereafter referred to as a ``camera''. 
+combinations -- hereafter referred to as a "camera". 
 
 The documentation takes the form of a tutorial based on the author's
 trial-and-error experience of adapting the LSST stack to a wide field
@@ -19,11 +19,13 @@ results. Also note that any description of the stack's packages are
 based on the author's own limited understanding which is, in turn,
 based on (currently) very limited official documentation.
 
-Accompanying this tutorial is a github repository, obs_necam
+Accompanying this tutorial is a github repository, `obs_necam`_
 (pronounced "any cam"), which contains templates of the scripts and
 files needed to adapt the LSST stack to an alternate camera. The
 commits to this repository provide a set of snapshots which are
 referred to at key stages throught the tutorial.
+
+.. _obs_necam https://github.com/jrmullaney/obs_necam
 
 Finally, it is important to note that this documentation is in no way
 affiliated with nor endorsed by the LSST organisation.
