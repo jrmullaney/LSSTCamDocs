@@ -19,7 +19,7 @@ results. Also note that any description of the stack's packages are
 based on the author's own limited understanding which is, in turn,
 based on (currently) very limited official documentation.
 
-Accompanying this tutorial is a github repository, obs_necam
+Accompanying this tutorial is a github repository, obs_necam_
 (pronounced "any cam"), which contains templates of the scripts and
 files needed to adapt the LSST stack to an alternate camera. The
 commits to this repository provide a set of snapshots which are
