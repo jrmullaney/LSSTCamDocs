@@ -23,4 +23,19 @@ The next line ``template: ...`` describes the location of the file within the fi
 
 Note the variable format descriptor after the closing bracket (e.g., the ``s`` in ``%(<value>)s``), which tells the stack the format of each ID in the filepath. Here, ``s`` refers to string, whereas ``04d`` means a number four characters long, padded with 0's if necessary.
 
-We'll keep adding to the policy file as we develop the obs\_package as we progress through the guide. 
+We'll keep adding to the policy file as we develop the obs\_package as we progress through the guide.
+
+The mapper script - Part 2
+------------------------------------
+
+With our policy file now created (although far from complete), we need to tell our obs\_package how to find it. We do this via the mapper script (in ``python/lsst/obs/necam/necamMapper.py``).
+
+After declaring our ``packageName`` within the mapper script, we start an ``__init__`` function (for now, we'll skip over the ``MakeRawVisitInfoClass`` variable in ``necamMapper.py`` since it is not needed just yet), then declare a variable that tells the mapper the name of our policy file: ::
+
+	def __init__(self, inputPolicy=None, **kwargs):
+		
+		#Declare the policy file:
+		policyFile = Policy.defaultPolicyFile(self.packageName, "NecamMapper.yaml", "policy")
+		policy =Policy(policyFile)
+
+
