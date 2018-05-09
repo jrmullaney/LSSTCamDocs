@@ -8,7 +8,8 @@ A camera's ''obs'' package
    ups			
    mapper			
    config
-   policy   
+   policy
+   camera   
 
 .. update index
 
