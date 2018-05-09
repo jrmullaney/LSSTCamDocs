@@ -38,4 +38,4 @@ After declaring our ``packageName`` within the mapper script, we start an ``__in
 		policyFile = Policy.defaultPolicyFile(self.packageName, "NecamMapper.yaml", "policy")
 		policy =Policy(policyFile)
 
-
+Now that the stack knows the filenaming conventions from the policy file, it can start *ingesting* data, which we cover next.  
