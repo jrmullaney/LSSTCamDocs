@@ -38,4 +38,4 @@ After declaring our ``packageName`` within the mapper script, we start an ``__in
 		policyFile = Policy.defaultPolicyFile(self.packageName, "NecamMapper.yaml", "policy")
 		policy =Policy(policyFile)
 
-Now that the stack knows the filenaming conventions from the policy file, it can start *ingesting* data, which we cover next.  
+This ensures that the stack knows where to find the filename conventions. Recall, however, that the policy file also tells the stack where to find information about the physical properties of the camera (via ``camera: "../camera"``), which we consider at next.
