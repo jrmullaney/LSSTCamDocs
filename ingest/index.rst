@@ -10,7 +10,7 @@ Ingesting: Declaring file locations and types
 
 .. update index
 
-Before the stack can process your data, it first needs to *ingest* it. Ingesting is performed by executing the ``ingestImages.py`` task, which will be described later. Ingesting achieves two main goals:
+Before the stack can process your data, it first needs to *ingest* it. Ingesting is performed by the ``ingestImages.py`` task, the execution of which will be described later. Ingesting achieves two main goals:
 
 * it copies/moves/links your raw data to the location in your filesystem specified within your policy file;
 * it places entries within a database that contain selected information about the observations (such as date of observation, filter, etc.)
