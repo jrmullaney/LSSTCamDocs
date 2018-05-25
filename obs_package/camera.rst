@@ -16,4 +16,4 @@ To create the fits table(s) describing the CCDs, I have written a python script 
 
 The camera files contained within obs\_necam are set to work with the simulated data that we will process throughout later in this guide. Clearly, you'll need to adjust a wide number of parameters to suit your own camera. Since there are so many parameters to set within the camera files (including within ``buildDetector.py``), and since there are a number that I don't fully understand myself, I haven't written an exhaustive list of them here. Instead, I refer you to the comments contained within the ``camera.py`` and ``buildDetector.py`` scripts.
 
-With our obs\_package now containing all the files that it needs (if not yet complete), we can now start running our first LSST stack which will *ingest* our data. 
+With our obs\_package now containing all the files that it needs (if not yet complete), we can now start running our first LSST stack task which will *ingest* our data. 
