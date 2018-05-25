@@ -43,6 +43,6 @@ The translation block works well for values that are already stored in the appro
 
 block in necam's ingest config file which, again, you may wish to edit to suit your own requirements.
 
-The ingest task now has everything it needs to know to extract and parse information from the fits headers of the input data. Next, it needs to know the column names this information should to be stored under within the database and the format of the data (e.g., string, integer, etc.). It also needs to know what combination of data uniquely identifies an exposure -- for example, lots of exposures from a raft of CCDs may share a single visit number, but it may be the case that the combination of a visit number *and* a CCD number uniquely identifies an exposure. 
+The ingest task now has everything it needs to know to extract and parse information from the fits headers of the input data. Next, it needs to know the column names this information should to be stored under within the database and the format of the data (e.g., string, integer, etc.). It also needs to know what combination of data uniquely identifies an exposure -- for example, lots of exposures from a raft of CCDs may share a single visit number, but it may be the case that the combination of a visit number *and* a CCD number uniquely identifies an exposure. Finally, it needs to  
 
 
