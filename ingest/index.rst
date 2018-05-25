@@ -22,17 +22,27 @@ The ingest config file
 
 The ingest config tells the ingest task what information it needs to put into the data and where it can find this data (and how to parse it, where mecessary).
 
-The first few lines in the ingest config file imports and retargets a module contained within your ``python/lsst/obs/necam`` directory that tells ingest how to _parse_ the various values it eventually puts into the database (more on parsing later).
+The first few lines in the ingest config file imports and retargets a module contained within your ``python/lsst/obs/necam`` directory that tells ingest how to *parse* the various values it eventually puts into the database (more on parsing later).
 
-Next is a _translation_ block (``config.parse.translation``) which tells ingest which header keywords to look up in your raw data files to find the values that need to go into the database. For example, the exposure time of the observation is stored in the "expTime" column in the database, but is associated with the "EXPTIME" keyword in your raw file's fits header.
+Next is a *translation* block ::
 
-The translation block works well for values that are already in the appropriate format within the fits header of your raw data files. However, in many cases this will not be the case. For example, the date in the fits header may be in YYYY-MM-DDTHH:MM:SS.FFFF ISO format, yet the database only accepts YYYY-MM-DD format. To accomodate such cases requires some degree of _parsing_, whereby a small python function takes the value from the header and parses it into the correct format. These parsing functions are contained within the ``python/lsst/obs/necam/ingest.py`` file as part of a ``NecamParseTask`` class and have appropriate names such as ``translateDate``. You'll need to write your own parsing functions where necessary, so feel free to use necams's translation functions as a guide. Having done that, you must tell the ingest config file which translator functions to use for each of the database entries that require it. This is done by the :: 
+    config.parse.translation = {'dataType':'IMGTYPE',
+                                'expTime':'EXPTIME',
+                                'frameId':'RUN-ID',
+                                'filter':'FILTER',
+                                'field':'OBJECT'}
+
+which tells ingest which header keywords to look up in your raw data files to find the values that need to go into the database. For example, the exposure time of the observation is stored in the "expTime" column in the database, but is associated with the "EXPTIME" keyword in your raw file's fits header.
+
+The translation block works well for values that are already stored in the appropriate format within the fits header of your raw data files. However, in many cases this will not be the case. For example, the date in the fits header may be in YYYY-MM-DDTHH:MM:SS.FFFF ISO format, yet the database only accepts YYYY-MM-DD format. To accomodate such cases requires some degree of *parsing*, whereby a small python function takes the value from the header and parses it into the correct format. These parsing functions are contained within the ``python/lsst/obs/necam/ingest.py`` file as part of a ``NecamParseTask`` class and have appropriate names such as ``translateDate``. You'll need to write your own parsing functions where necessary, so feel free to use necams's translation functions as a guide. Having done that, you must tell the ingest config file which translator functions to use for each of the database entries that require it. This is done by the :: 
 
     config.parse.translators = {'dateObs':'translateDate',
                                 'taiObs':'translateDate',
                                 'visit':'translateVisit',
                                 'ccd':'translateCcd'}
 
-block in necam's ingest config file, which you should edit to suit your own requirements.
+block in necam's ingest config file which, again, you may wish to edit to suit your own requirements.
+
+The ingest task now has everything it needs to know to extract and parse information from the fits headers of the input data. Next, it needs to know the column names this information should to be stored under within the database and the format of the data (e.g., string, integer, etc.). It also needs to know what combination of data uniquely identifies an exposure -- for example, lots of exposures from a raft of CCDs may share a single visit number, but it may be the case that the combination of a visit number *and* a CCD number uniquely identifies an exposure. 
 
 
