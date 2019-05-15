@@ -13,12 +13,11 @@ A camera's ''obs'' package
 
 .. update index
 
-Adapting the LSST stack to a new camera involves setting up a new
-package within the LSST stack. This package is usually called an
-obs\_package. I like to think of it as an interface between the
+Adapting the LSST stack to a new camera involves writing your own
+obs\_package. I like to think of an obs\_package as an interface between the
 rest of the LSST stack and the data from the camara. Contained within
 an obs\_package is a set of Python scripts and configuration
-files that tells the rest of the stack things like:
+files that tells the rest of the stack information such as:
 
 * the properties of your detector (e.g., dimensions, overscan region) and its filters,
 * the file structure where your data is held,
@@ -26,10 +25,10 @@ files that tells the rest of the stack things like:
 * what tasks you'd like the stack to do, such as source detection, deblending, astrometric correction, photometric calibration etc.
 
 Provided you only want to use the stack in its current form (i.e., you
-don't want to edit the stack proper to add extra functionalities) then
+don't want to add new modules to the stack proper to add extra functionalities) then
 making your own obs\_package is the *only* thing you will need to
-do to adapt the stack to your camera. Having said that, developing
-your own obs\_package is no trivial task.
+do to enable the stack to process the data from your camera. Having said that, developing
+your own obs\_package is not a trivial task.
 
 If you have already installed the LSST stack, you will note that it
 already contains a number of obs\_packages; for example,
@@ -67,8 +66,8 @@ directories called: ::
 	    mkdir -p python/lsst/obs/necam
 
 The next few pages will describe in detail the files that these
-directories need to contain to process your camera's data. Here, I
-just provide a brief description:
+directories must contain to process your camera's data. Here, I
+just provide a brief description of the contents of each directory:
 
 * **camera:** Files containing information that describe the properties of your camera, such as its dimensions, gain etc.
 * **config:** Configuration files that tell the various stack process that access your data how to behave. 
@@ -87,6 +86,6 @@ you will need to add some ``__init__.py`` files to the
 Note the ``>>`` in the last line, which appends to the file. Next, do
 the same in ``$stack/python/lsst/obs`` . If you make a mistake in the
 above commands, edit the file using your favourite editor (vim, emacs,
-etc.).
+VS Code, etc.).
 
 

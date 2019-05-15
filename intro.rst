@@ -3,10 +3,10 @@ Introduction
 
 A major component the LSST project is the development of a software
 stack that will process the raw data from the raft of CCDs that form
-the LSST's detector. The end product of the stack will be a database
-containing the properties of billions of astronomical sources.
+the LSST's detector. The ultimate end product of the stack will be fully calibrated images of the entire southern sky and database
+containing the properties of the billions of astronomical sources contained within those images.
 
-While the telescope itself will not see first light until 2019, it is
+While the telescope itself will not see first light until the end of 2019, it is
 important that the software needed to process the first observations
 is in a reasonable state of readiness prior to that time. As such,
 considerable work has already been carried-out in developing this
@@ -30,13 +30,13 @@ reasonable to ask why we should bother adapting and using the LSST
 stack to analyse data from other cameras. Here are my reasons, but you
 may have your own:
 
-* it enables the significant experience and expertise of the people developing the stack to be applied to our data;
+* it leverages the significant experience and expertise of the people developing the stack for the processing of our data;
 
 * Speed: while the higher level tasks are performed with Python, the stack does all its ``heavy lifting'' using much faster pre-compiled C++ code. In addition, a number of the stack's top-level tasks can be parallelised, providing further speed-ups compared to other pipelines;
 
 * the end stack will include many features that are not normally or easily implemented in other pipelines (e.g., forced photometry, multi-epoch stacking). Although some of these are still under development, adapting the stack to other cameras now means they can be exploited as and when they become available;
 
-* the LSST stack is still under active development; by adapting the stack for other cameras, we can test it and provide feedback to improve it prior to the LSST's first light.
+* the LSST stack is still under active development; by adapting the stack for other cameras, we can test it and provide feedback to improve it prior to and during the LSST's operations.
 
 The reason for this guide
 -------------------------
@@ -47,7 +47,7 @@ LSST software stack for this task. We soon discovered that to achieve
 this goal, we would need to develop a set of Python scripts and
 configuration files (hereafter, referred to as an ``obs\_package'')
 that tells the stack how to read and process our data. We also
-discovered, however, that while obs\_packages do exists for other
+discovered, however, that while obs\_packages exist for other
 cameras, there was very little documentation describing how they were
 developed.
 

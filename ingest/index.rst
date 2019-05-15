@@ -41,7 +41,7 @@ The translation block works well for values that are already stored in the appro
                                 'visit':'translateVisit',
                                 'ccd':'translateCcd'}
 
- which, again, you may wish to edit to suit your own requirements.
+which, again, you may wish to edit to suit your own requirements.
 
 The ingest task now has everything it needs to know to extract and parse information from the fits headers of the input data. Next, it needs to know the column names this information should be stored under within the database and the format of the data (e.g., string, integer, etc.). It also needs to know which columns describe a ``raw_visit`` (it seems, however, this is may be a bit of a relic; see `this LSST community forum thread <https://community.lsst.org/t/appropriate-use-of-raw-and-raw-skytile-tables-in-mappers/1111>`_ ). Finally, it also needs to know what combination of data uniquely identifies an exposure -- for example, lots of exposures from a raft of CCDs may share a single visit number, but it may be the case that the combination of a visit number *and* a CCD number uniquely identifies an exposure. These three pieces of information are provided by the following three blocks in the ingest config file ::
 
@@ -60,6 +60,8 @@ The ingest task now has everything it needs to know to extract and parse informa
     config.register.unique = ['visit', 'ccd']
 
 This completes all the information that the ``ingestImages.py`` task needs to parse the necessary data from the headers of the raw images and ingest it into its database of images.
+
+
 
 
 

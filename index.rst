@@ -17,7 +17,7 @@ set up your own camera, you will have to adjust a wide range of
 parameters to suit your camera before it will produce reliable
 results. Also note that any description of the stack's packages are
 based on the author's own limited understanding which is, in turn,
-based on (currently) very limited official documentation.
+based on (currently) very limited official documentation for the LSST stack.
 
 Accompanying this tutorial is a github repository, `obs_necam <https://github.com/jrmullaney/obs_necam>`_
 (pronounced "any cam"), which contains templates of the scripts and
