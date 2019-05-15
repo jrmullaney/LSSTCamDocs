@@ -45,16 +45,11 @@ these modules here; it makes more sense if they are described as we
 encounter them in the script. After these imports, a python class is
 defined called ``NecamMapper`` that inherits the ``CameraMapper``
 class (note that ``NecamMapper`` is the last of the period-separated
-strings in the ``_mapper`` file): ::
+strings in the ``_mapper`` file), which is followed by a line that defines the ``packageName``: ::
 	class NecamMapper(CameraMapper):
+		packageName = 'obs_necam'
 
-Within ``NecamMapper`` we declare which obs\_package we want the task
-to use to access our data; despite the ``_mapper``
-file, this is the first time the task has been explicitly told which
-package to use to access our data ::
-	packageName = 'obs_necam'
-
-As you'd expect, this *must* match an obs\_package that has been setup
+This is the first time the task has been explicitly told (via ``packageName = 'obs_necam'``) which package to use to access our data. As you'd expect, this *must* match an obs\_package that has been setup
 in the eups system, and in almost all cases will be the current
 obs\_package.
 
