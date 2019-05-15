@@ -18,20 +18,19 @@ topmost level of your input data directory. For example, if your
 telescopes raw data is held in: ::
 	   /path/to/my/data/raw/Night1/
 
-then you may wish to put ``_mapper`` in the ``data/`` directory (the
-one that contains the ``raw`` data). In that instance, the input
+then you may wish to put ``_mapper`` in the ``data/`` directory. In that instance, the input
 directory given to the LSST task would then be ``/path/to/my/data/``.
 
 To enable the LSST stack to work with our ``obs_necam`` package,
 ``_mapper`` would need to contain a single line entry: ::
 	    lsst.obs.necam.necamMapper.NecamMapper
 
-(note to follow the single line with a carriage return).
+and make sure that the single line is followed with a carriage return.
 
 The mapper script - Part 1
 ------------------------------------
 
-Because it plays a very central role in the way an LSST task accesses
+Because it plays a central role in the way an LSST task accesses
 data, an obs\_package's mapper script can become rather extensive. As
 such, in this tutorial we will build up the mapper script in separate
 stages, returning to it as the obs\_package develops. In this first
@@ -61,4 +60,3 @@ obs\_package.
 
 Now the task you have executed knows the ``packageName``, it can
 look for a corresponding configuration file, which is described next.
-```
