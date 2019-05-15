@@ -76,7 +76,7 @@ telling it which is the current version with the following command: ::
 
    eups declare -t current obs_necam v1
 
-Unlike declare, you must setup your obs\_package every time
+Unlike with declare (which you only need to do once), you must _setup_ your obs\_package every time
 you start a new session. Of course, you can automate this by adding
 the ``setup`` command to your ``.bashrc`` file.
 
