@@ -40,7 +40,7 @@ where it can find a configuration file containing a set of
 instructions and parameters that tell the task what to do.
 
 The part of the mapper script described here can be found in the
-obs\_necam GitHub repository (https://github.com/jrmullaney/obs_necam) and is called ``necamMapper.py`` (the filename must be the same as the last-but-one of the period-separated strings in the ``_mapper`` file, described above, but with the addition of ``.py'' at the end). At the beginning of
+obs\_necam GitHub repository (https://github.com/jrmullaney/obs_necam) and is called ``necamMapper.py`` (the filename must be the same as the last-but-one of the period-separated strings in the ``_mapper`` file, described above, but with the addition of ``.py`` at the end). At the beginning of
 the script a number of LSST modules are imported. I won't describe
 these modules here; it makes more sense if they are described as we
 encounter them in the script. After these imports, a python class is
