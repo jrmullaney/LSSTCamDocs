@@ -1,18 +1,24 @@
-Processing your camara's data
-=============================
+Processing a single science frame
+=================================
 
-Among the first and most fundamental tasks that you will want the
-LSST stack to do is to process your imaging data to remove instrument
-signatures (e.g., overscan removal, bias subtraction, flat-fielding)
-and perform source detection. Both these tasks are performed by
-``processCcd.py``.
+.. toctree::
+   :maxdepth: 5
+   :hidden:   
 
-Like all of the data processing tasks in the LSST stack,
-``processCcd.py`` resides in the ``pipe_tasks`` repository. This means
-that, provided you have (a) setup the eups table in ``obs_necam``
-following the instructions in `The EUPS table
-<http://lsstcamdocs.readthedocs.io/en/latest/obs_package/ups.html>`_
-section and (b) executed ``setup obs_necam'' command,
-``processCcd.py`` will be callable from the command line. To use
-``processCcd.py``, we need to tell it where the input data is, and
-where it should put any output data:
+   mastercal			
+   processCcd			
+
+.. update index
+
+With the stack now installed and your data files ingested, we can now start to process data. In this tutorial, we will use the stack perform the following processing steps:
+* combine a set of calibration frames to create master bias, flat, and dark frames;
+* correct a science frame using the master calibration frames;
+* calibrate and characterise the science frame, which involves sky subtraction, PSF modelling, astrometric correction, and photometric calibration;
+* source detection and measurement.
+
+The first first item on the above list is conducted by the ``constructBias.py``,  ``constructFlat.py`` and ``constructDark.py`` pipe tasks, which we will look at next. Following ingestion of the master calibration frames, the remaining items are all carried-out by a single task - ``processCcd.py``. This latter task will likely require more configuring than any other pipe task you will encounter. 
+
+Before continuing, it's worth pointing out that pipe tasks run on single cores, and will thus process your data serially. Most pipe tasks, however, have multi-core equivalents known as ``pipe_drivers``, which farm out the pipe tasks to multiple cores. Running and configuring pipe drivers are similar to that of pipe tasks, so I've included be a brief section on how to run the equivalent pipe driver after describing their associated pipe task.
+
+
+
