@@ -16,7 +16,7 @@ extensions = [
 
 # General information about the project.
 project = u'Adapting the LSST Stack'
-copyright = u'2016, James Mullaney'
+copyright = u'2019, James Mullaney'
 author = u'James Mullaney'
 
 # The short X.Y version.
