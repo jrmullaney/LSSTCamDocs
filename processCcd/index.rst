@@ -17,7 +17,7 @@ With the stack now installed and your data files ingested, we can start to proce
 * calibrate and characterise the science frame, which involves sky subtraction, PSF modelling, astrometric correction, and photometric calibration;
 * source detection and measurement.
 
-The first first item on the above list is performed by the ``constructBias.py``,  ``constructFlat.py`` and ``constructDark.py`` pipe tasks, which we will look at next. Following ingestion of the master calibration frames, the remaining items are all performed by a single task: ``processCcd.py``. This latter task will likely require more configuring than any other pipe task you will encounter. 
+The first item on the above list is performed by the ``constructBias.py``,  ``constructFlat.py`` and ``constructDark.py`` pipe tasks, which we will look at next. Following ingestion of the master calibration frames, the remaining items are all performed by a single task: ``processCcd.py``. This latter task will likely require more configuring than any other pipe task you will encounter. 
 
 Before continuing, it is worth pointing out that pipe tasks run on a single core, and will thus process your data serially. Most pipe tasks, however, have multi-core equivalents known as ``pipe_drivers``, which farm out the pipe tasks to multiple cores. Configuring a pipe driver is similar to configuring a pipe tasks, so I've included a brief section on how to configure and run the equivalent pipe driver after describing their associated pipe task.
 
