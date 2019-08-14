@@ -50,6 +50,8 @@ The ingest task now has everything it needs to know to extract and parse informa
 
     config.register.unique = ['visit', 'ccd']
 
+While you can add any information you want into the registry, there are some that are strongly recommended. For example, the stack will find it difficult/impossible to process data if it doesn't know what type of data each frame represents (e.g., dark, flat, science, etc. frame; given by the ``dataType'' column in the above example). Exposure times are needed to calculate count rates, and you should also include any parameters that you expect to select frames on (i.e., if you expect to select frames based on data range, or filter, then you'll need to include those). 
+
 This completes all the information that the ``ingestImages.py`` task needs to parse the necessary data from the headers of the raw images and ingest it into its database of images.
 
 
