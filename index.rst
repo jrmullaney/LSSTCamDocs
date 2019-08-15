@@ -23,6 +23,8 @@ Accompanying this tutorial is a github repository, `obs_necam <https://github.co
 (pronounced "any cam"), which contains templates of the scripts and
 files needed to adapt the LSST stack to an alternate camera. I recommend you refer to the contents of that repository while following this guide; indeed, feel free to fork and edit obs_necam_ as you progress.
 
+*Important Note August 2019:* This tutorial is based on the Generation 2 ("Gen 2") stack. Currently, the stack is undergoing some major changes while transitioning to the next generation, Gen 3. While some of this tutorial will remain relevant for Gen 3, large parts will change. As such, while reading through this tutorial will introduce you to the broad concepts of developing your own obs package, you may wish, if you can, to hold off developing your own obs package until the stack has transitioned to Gen 3 with v.19 (due late 2019).   
+
 Finally, it is important to note that this documentation is in no way
 affiliated with nor endorsed by the LSST organisation.
 
